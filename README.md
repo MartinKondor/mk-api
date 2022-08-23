@@ -20,8 +20,16 @@ API service made for my softwares.
 
 Dowload and install the dependencies with the command:
 
-```
+```bash
 $ python -m pip install -r requirements.txt
+```
+
+### Testing
+
+```bash
+
+# Starts the server
+$ uvicorn main:app --reload
 ```
 
 ## Contributing
