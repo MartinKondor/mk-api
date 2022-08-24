@@ -10,7 +10,7 @@ app = FastAPI()
 
 
 @app.get("/ai/{model_id}")
-async def ai(model_id: str, api_key: str, input: Union[str, None]=None):
+async def ai(model_id: str, api_key: str, input: str):
     
     # Authentication
     if not await auth(api_key):
@@ -30,7 +30,7 @@ async def ai(model_id: str, api_key: str, input: Union[str, None]=None):
     return {
         "s": 1,
         "model": found_model,
-        "output": 0 if input is None else found_model.predict(input)
+        "output": found_model.output(input)
     }
 
 
