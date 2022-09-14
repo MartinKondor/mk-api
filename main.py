@@ -30,7 +30,7 @@ async def ai(model_id: str, api_key: str, input: str):
     return {
         "s": 1,
         "model": found_model,
-        "output": found_model.output(input)
+        "output": found_model["pipeline"](input)
     }
 
 

@@ -3,7 +3,7 @@ from typing import Union
 
 API_KEYS = [
     "0pfAOhvat2B5B2Z8",  # DigitRecognizer
-    "9eL3IrQEu63Wa2uB"
+    "9eL3IrQEu63Wa2uB"  # hu-fake-news-detector
 ]
 
 async def auth(api_key: Union[str, None]):

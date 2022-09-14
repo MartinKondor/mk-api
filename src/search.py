@@ -9,7 +9,8 @@ async def get_ai_model(model_id):
     model_ids = os.listdir("models")
 
     if model_id in model_ids:
-        list_of_models = [m for m in os.listdir("models/{}".format(model_id)) if len(m) > 1 and m[0] != "."]
-        return load_model(model_id, f"models/{model_id}/{list_of_models[0]}")
+        #list_of_models = [m for m in os.listdir("models/{}".format(model_id)) if len(m) > 1 and m[0] != "."]
+        #return load_model(model_id, f"models/{model_id}/{list_of_models[0]}")
+        return load_model(model_id, f"models/{model_id}")
 
     return None
